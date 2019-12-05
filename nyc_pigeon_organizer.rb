@@ -37,7 +37,12 @@ def map_attributes_to_names_list(attributes)
 end
 
 def get_names(data)
-  data[:color]
+  names = []
+  data[:color].map do |color|
+    names.push(color[1])
+  end
+  names = names.join(',').split(',').uniq
+  names
 end
   
 def combine_attributes_under_names(aoh)
