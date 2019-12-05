@@ -10,8 +10,6 @@ def map_attributes_to_names_list(attributes)
   # flatten AoAoH to just AoH eg [{"Bill"=>:blue},{"Kara"=>:blue},{"Kara"=>:green}]
   by_names = by_attribute.reduce([]) {|memo,pair| memo += pair} 
 end
-
-
   
 colors = {
     :purple => ["Theo", "Peter Jr.", "Lucky"],
