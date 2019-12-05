@@ -55,8 +55,11 @@ end
 def nyc_pigeon_organizer(data)
   attributes = pigeon_data.keys
   for attribute in attributes do
-    pigeon_data[attribute]
-    
+    subattributes = pigeon_data[attribute].keys
+      for subattribute in subattributes do
+        
+        
+      end
   end
   
 end
