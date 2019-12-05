@@ -62,11 +62,9 @@ end
 def nyc_pigeon_organizer(data)
   pigeon_info = {}
   names = get_names(data)
-  names.map do |name|
-    pigeon_info[name] = {}
-  end
+  names.each {|name| pigeon_info[name] = {} }
   
-  attributes = pigeon_data.keys
+  attributes = data.keys
   for attribute in attributes do                    # level :color
     subattributes = pigeon_data[attribute].keys
       for subattribute in subattributes do          # level :blue
