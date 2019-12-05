@@ -2,6 +2,31 @@
 #assign color to each name associated
 #for each name, combine colors as list
 #make hash {:color => colorslist} for each name
+pigeon_data = {
+  :color => {
+    :purple => ["Theo", "Peter Jr.", "Lucky"],
+    :grey => ["Theo", "Peter Jr.", "Ms. K"],
+    :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
+    :brown => ["Queenie", "Alex"]
+  },
+  :gender => {
+    :male => ["Alex", "Theo", "Peter Jr.", "Andrew", "Lucky"],
+    :female => ["Queenie", "Ms. K"]
+  },
+  :lives => {
+    "Subway" => ["Theo", "Queenie"],
+    "Central Park" => ["Alex", "Ms. K", "Lucky"],
+    "Library" => ["Peter Jr."],
+    "City Hall" => ["Andrew"]
+  }
+}
+
+colors = {
+    :purple => ["Theo", "Peter Jr.", "Lucky"],
+    :grey => ["Theo", "Peter Jr.", "Ms. K"],
+    :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
+    :brown => ["Queenie", "Alex"]
+  }
 
 def map_attributes_to_names_list(attributes)
   by_attribute = attributes.map do |(key,value)|     # HoHoA
@@ -10,13 +35,8 @@ def map_attributes_to_names_list(attributes)
   # flatten AoAoH to just AoH eg [{"Bill"=>:blue},{"Kara"=>:blue},{"Kara"=>:green}]
   by_names = by_attribute.reduce([]) {|memo,pair| memo += pair} 
 end
-  
-colors = {
-    :purple => ["Theo", "Peter Jr.", "Lucky"],
-    :grey => ["Theo", "Peter Jr.", "Ms. K"],
-    :white => ["Queenie", "Andrew", "Ms. K", "Alex"],
-    :brown => ["Queenie", "Alex"]
-  }
+
+
   
 def combine_attributes_under_names(aoh)
   pigeons = {}
