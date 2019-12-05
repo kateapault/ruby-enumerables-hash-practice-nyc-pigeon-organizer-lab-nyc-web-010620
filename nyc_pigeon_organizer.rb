@@ -59,8 +59,13 @@ def combine_attributes_under_names(aoh)
   pigeons                       #HoA
 end
 
-def nyc_pigeon_organizer(pigeon_data)
-  pigeon_info
+def nyc_pigeon_organizer(data)
+  pigeon_info = {}
+  names = get_names(data)
+  names.map do |name|
+    pigeon_info[name] = {}
+  end
+  
   attributes = pigeon_data.keys
   for attribute in attributes do                    # level :color
     subattributes = pigeon_data[attribute].keys
