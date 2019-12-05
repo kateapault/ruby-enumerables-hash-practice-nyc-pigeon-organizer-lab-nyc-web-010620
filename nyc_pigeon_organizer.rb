@@ -54,9 +54,9 @@ end
 
 def nyc_pigeon_organizer(data)
   attributes = pigeon_data.keys
-  for attribute in attributes do
+  for attribute in attributes do                    # level :color
     subattributes = pigeon_data[attribute].keys
-      for subattribute in subattributes do
+      for subattribute in subattributes do          # level :blue
         
         
       end
