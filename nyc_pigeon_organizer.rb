@@ -46,9 +46,9 @@ def nyc_pigeon_organizer(data)
         names = data[attribute][subattribute]
         for name in names do
           if !pigeon_info[name].include?(attribute)
-            pigeon_info[name][attribute] = [subattribute]
+            pigeon_info[name][attribute] = [subattribute.to_s]
           else 
-            pigeon_info[name][attribute] += [subattribute]
+            pigeon_info[name][attribute] += [subattribute.to_s]
           end
         end
       end 
