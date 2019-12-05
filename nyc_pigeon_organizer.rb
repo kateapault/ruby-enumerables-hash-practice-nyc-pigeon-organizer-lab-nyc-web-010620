@@ -36,7 +36,9 @@ def map_attributes_to_names_list(attributes)
   by_names = by_attribute.reduce([]) {|memo,pair| memo += pair} 
 end
 
-
+def get_names
+  
+end
   
 def combine_attributes_under_names(aoh)
   pigeons = {}
@@ -60,10 +62,12 @@ def nyc_pigeon_organizer(pigeon_data)
       for subattribute in subattributes do          # level :blue
         names = pigeon_data[attribute][subattribute]
         for name in names do
-          if !pigeon_info.include?(name[attribute])
+          if !pigeon_info[name].include?(attribute)
             pigeon_info[name][attribute] = [subattribute]
-        
-      end
+          else 
+            pigeon_info[name][attribute] += [subattribute]
+          end
+      end 
   end
   
   pigeon_info
