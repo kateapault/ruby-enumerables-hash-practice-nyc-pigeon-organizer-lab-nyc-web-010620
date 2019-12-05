@@ -60,7 +60,7 @@ def nyc_pigeon_organizer(pigeon_data)
       for subattribute in subattributes do          # level :blue
         names = pigeon_data[attribute][subattribute]
         for name in names do
-          if !pigeon_info.keys.include?(name)
+          if !pigeon_info.include?(name)
         
       end
   end
