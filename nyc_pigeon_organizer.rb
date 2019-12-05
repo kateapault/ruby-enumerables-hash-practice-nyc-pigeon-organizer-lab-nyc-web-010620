@@ -53,8 +53,9 @@ def combine_attributes_under_names(aoh)
 end
 
 def nyc_pigeon_organizer(data)
-  for attribute in data do
-    print attribute.keys
+  attributes = pigeon_data.keys
+  for attribute in attributes do
+    pigeon_data[attribute]
     
   end
   
