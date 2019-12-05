@@ -38,7 +38,7 @@ end
 
 def get_names(data)
   n = {}
-  while n.class != 
+  while n.class != Array
 end
   
 def combine_attributes_under_names(aoh)
