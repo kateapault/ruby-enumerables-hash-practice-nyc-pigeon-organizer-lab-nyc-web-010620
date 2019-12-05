@@ -36,8 +36,9 @@ def map_attributes_to_names_list(attributes)
   by_names = by_attribute.reduce([]) {|memo,pair| memo += pair} 
 end
 
-def get_names
-  
+def get_names(data)
+  n = {}
+  while n.class != 
 end
   
 def combine_attributes_under_names(aoh)
