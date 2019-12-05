@@ -40,11 +40,13 @@ def nyc_pigeon_organizer(data)
   names.each {|name| pigeon_info[name] = {} }
   
   attributes = data.keys
-  for attribute in attributes do                    # level :color
+  
+  
+  attributes.each do |attribute|                  # level :color
     subattributes = data[attribute].keys
-      for subattribute in subattributes do          # level :blue
+      subattributes.each do |subattribute|         # level :blue
         names = data[attribute][subattribute]
-        for name in names do
+        names.each do |name|
           if !pigeon_info[name].include?(attribute)
             pigeon_info[name][attribute] = [subattribute.to_s]
           else 
