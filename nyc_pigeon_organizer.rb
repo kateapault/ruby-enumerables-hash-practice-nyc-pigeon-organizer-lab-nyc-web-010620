@@ -50,6 +50,7 @@ def nyc_pigeon_organizer(data)
           else 
             pigeon_info[name][attribute] += [subattribute]
           end
+        end
       end 
   end
   
