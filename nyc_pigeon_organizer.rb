@@ -37,8 +37,7 @@ def map_attributes_to_names_list(attributes)
 end
 
 def get_names(data)
-  n = {}
-  while n.class != Array
+  data[:color]
 end
   
 def combine_attributes_under_names(aoh)
