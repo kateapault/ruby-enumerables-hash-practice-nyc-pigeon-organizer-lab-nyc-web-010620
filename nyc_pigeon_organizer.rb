@@ -33,7 +33,10 @@ def combine_attributes_under_names(aoh)
 end
 
 def nyc_pigeon_organizer(data)
-  data.map 
+  for attribute in data do
+    print attribute.keys
+    
+  end
   
 end
 
